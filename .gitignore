@@ -4,4 +4,6 @@
 /config/development/
 app/config/config.php
 app/cache/
+/vendor/
+composer.lock
 

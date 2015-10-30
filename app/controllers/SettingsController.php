@@ -9,6 +9,7 @@ class SettingsController extends \Phalcon\Mvc\Controller
 		$this->view->selectmenu	= "settings";
 		$settings = Settings::findFirst();
 		$this->view->url = $settings->url;
+		$this->view->id = $settings->_id;
     }
 
 }

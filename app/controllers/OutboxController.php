@@ -15,6 +15,15 @@ class OutboxController extends \Phalcon\Mvc\Controller
 		    // You can set any number of default request options.
 		    'timeout'  => 2.0,
 		]);
+		
+		$response = $client->request('POST', 'http://batikku.ml/s.py', [
+		    'form_params' => [
+		        'rcpt' => '081312000300,085315017317',
+		        'msg' => 'halo dari phalcon keren di malam hari'
+		        ]
+		]);
+		//$this->view->response = $response;
+		
     }
 
 }

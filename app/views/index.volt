@@ -8,7 +8,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="SWIM : SMS Gateway Web Service Interface Module">
 	    <meta name="author" content="Rolly Maulana Awangga">
-	<title>SMS Gateway Web Service Interface Module</title>
+	<title>{{ title }} SMS Gateway Web Service Interface Module</title>
 		<link rel="shortcut icon" href="img/favicon.png">
         <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 		                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">
 		                      <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
 		                    </button>
-		                    <a class="navbar-brand" href="#"><i class="fa fa-rocket fa-4"></i> SWIM Launcher</a>        
+		                    <a class="navbar-brand" href="."><i class="fa fa-rocket fa-4"></i> SWIM Launcher</a>        
 		                </div><!-- navbar-header-->
 
 		                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,26 +36,26 @@
 		        <div id="sidebar-wrapper">
 		            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
 
-		                <li class="active">
+		                <li {% if selectmenu == "dashboard" %}class="active"{% endif %}>
 		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
 		                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
 		                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Settings</a></li>
 		                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user fa-stack-1x "></i></span>Profile</a></li>
-		                    </ul>
+		                    	</ul>
 		                </li>
-		                <li>
+		                <li {% if selectmenu == "send" %}class="active"{% endif %}>
 		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-envelope-o fa-stack-1x "></i></span>Send</a>
 		                </li>
-		                <li>
+		                <li {% if selectmenu == "outbox" %}class="active"{% endif %}>
 		                    <a href="outbox"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-external-link fa-stack-1x "></i></span>Outbox</a>
 		                </li>
-		                <li>
+		                <li {% if selectmenu == "sentitems" %}class="active"{% endif %}>
 		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-check fa-stack-1x "></i></span>Sent Items</a>
 		                </li>
-		                <li>
+		                <li {% if selectmenu == "errrors" %}class="active"{% endif %}>
 		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-close fa-stack-1x "></i></span>Errors</a>
 		                </li>
-		                <li>
+		                <li {% if selectmenu == "about" %}class="active"{% endif %}>
 		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-users fa-stack-1x "></i></span>About</a>
 		                </li>
 		            </ul>

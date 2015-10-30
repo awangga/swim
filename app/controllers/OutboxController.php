@@ -5,7 +5,8 @@ class OutboxController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-		$this->view->outbox;
+		$this->view->title = "Outbox - ";
+		$this->view->selectmenu	= "outbox";
     }
 
 }

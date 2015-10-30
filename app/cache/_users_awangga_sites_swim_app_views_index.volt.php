@@ -39,7 +39,7 @@
 		                <li <?php if ($selectmenu == 'dashboard') { ?>class="active"<?php } ?>>
 		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
 		                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-		                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Settings</a></li>
+		                        <li <?php if ($selectmenu == 'settings') { ?>class="active"<?php } ?>><a href="settings"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Settings</a></li>
 		                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user fa-stack-1x "></i></span>Profile</a></li>
 		                    	</ul>
 		                </li>

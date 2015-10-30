@@ -83,3 +83,19 @@ $di->setShared('session', function () {
 
     return $session;
 });
+
+// Simple database connection to localhost
+$di->set('mongo', function () {
+    $mongo = new MongoClient();
+    return $mongo->selectDB("swim");
+}, true);
+
+// Connecting to a domain socket, falling back to localhost connection
+//$di->set('mongo', function () {
+//    $mongo = new MongoClient("mongodb:///tmp/mongodb-27017.sock,localhost:27017");
+//    return $mongo->selectDB("swim");
+//}, true);
+
+$di->set('collectionManager', function(){
+    return new Phalcon\Mvc\Collection\Manager();
+}, true);

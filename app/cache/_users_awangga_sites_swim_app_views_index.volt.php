@@ -50,13 +50,13 @@
 		                    <a href="outbox"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-external-link fa-stack-1x "></i></span>Outbox</a>
 		                </li>
 		                <li <?php if ($selectmenu == 'sentitems') { ?>class="active"<?php } ?>>
-		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-check fa-stack-1x "></i></span>Sent Items</a>
+		                    <a href="sentitems"><span class="fa-stack fa-lg pull-left"><i class="fa fa-check fa-stack-1x "></i></span>Sent Items</a>
 		                </li>
 		                <li <?php if ($selectmenu == 'errrors') { ?>class="active"<?php } ?>>
-		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-close fa-stack-1x "></i></span>Errors</a>
+		                    <a href="errors"><span class="fa-stack fa-lg pull-left"><i class="fa fa-close fa-stack-1x "></i></span>Errors</a>
 		                </li>
 		                <li <?php if ($selectmenu == 'about') { ?>class="active"<?php } ?>>
-		                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-users fa-stack-1x "></i></span>About</a>
+		                    <a href="about"><span class="fa-stack fa-lg pull-left"><i class="fa fa-users fa-stack-1x "></i></span>About</a>
 		                </li>
 		            </ul>
 		        </div><!-- /#sidebar-wrapper -->

@@ -11,18 +11,12 @@ class OutboxController extends \Phalcon\Mvc\Controller
 		$this->view->selectmenu	= "outbox";
 		$client = new Client([
 		    // Base URI is used with relative requests
-		    'base_uri' => 'http://batikku.ml',
+		    'base_uri' => 'http://batikku.ml/',
 		    // You can set any number of default request options.
 		    'timeout'  => 2.0,
 		]);
-		
-		$response = $client->request('POST', 'http://batikku.ml/s.py', [
-		    'form_params' => [
-		        'rcpt' => '081312000300,085315017317',
-		        'msg' => 'halo dari phalcon keren di malam hari'
-		        ]
-		]);
-		//$this->view->response = $response;
+		$response = $client->request('GET', 'outboxs.py');
+		$this->view->response = $response->getBody();
 		
     }
 
